@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './Header';
+import ThemeContext from './ThemeContext';
 
 export const buttonThemes = {
   blue: {
@@ -13,8 +14,12 @@ export const buttonThemes = {
 };
 
 function App() {
+  const themeContext = React.useContext(ThemeContext);
   return (
-    <Header />
+    <ThemeContext.Provider value={buttonThemes.black}>
+      <Header />
+    </ThemeContext.Provider>
+    
   );
 }
 

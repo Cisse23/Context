@@ -9,7 +9,7 @@ function HeaderButton() {
   return (
     <div>
       
-        <button theme={themeContext}>Press me</button>
+        <button style={themeContext}>Press me</button>
       
     </div>
   );
